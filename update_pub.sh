@@ -37,7 +37,7 @@ git add "$TARGET_BIB"
 git commit -m "$COMMIT_MSG"
 git push origin "$BRANCH_NAME"
 
-# Step 3: Create PR
-# gh pr create --title "$COMMIT_MSG" --body "This PR adds new BibTeX entries." --base main --head "$BRANCH_NAME"
+Step 3: Create PR
+gh pr create --title "$COMMIT_MSG" --body "This PR adds new BibTeX entries on from $KERB." --base main --head "$BRANCH_NAME"
 
-# echo "Pull request created!"
+echo "Pull request created!"
