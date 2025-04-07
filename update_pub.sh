@@ -29,7 +29,7 @@ if ! python "$REPO_DIR/bibtex_test.py" "$TARGET_BIB"; then
     exit 1
 fi
 
-# # Step 2: Git ops
+# Step 2: Git ops
 git checkout main
 git pull origin main
 git checkout -b "$BRANCH_NAME"
@@ -37,7 +37,7 @@ git add "$TARGET_BIB"
 git commit -m "$COMMIT_MSG"
 git push origin "$BRANCH_NAME"
 
-Step 3: Create PR
+# Step 3: Create PR
 gh pr create --title "$COMMIT_MSG" --body "This PR adds new BibTeX entries on from $KERB." --base main --head "$BRANCH_NAME"
 
 echo "Pull request created!"
