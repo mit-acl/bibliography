@@ -11,6 +11,9 @@ try:
     lib = bibtexparser.parse_string(data)
     if len(lib.failed_blocks) > 0:
         errors = True
+        for block in lib.failed_blocks:
+            print("Probably a duplicate:")
+            print(block.raw)
     else:
         errors = False
 except Exception as e:
